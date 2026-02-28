@@ -10,15 +10,12 @@ import homework.word_count as wc
 def test_01():
     """Test Word Count"""
 
-    wc.generate_file_copies(n=1000)
-    wc.delete_folder("files/output/")
-    wc.hadoop(
-        input_folder="files/input/",
-        output_folder="files/output/",
-        mapper_fn=wc.mapper,
-        reducer_fn=wc.reducer,
-    )
-
+    # wc.copy_raw_files_to_input_folder(n=1000)
+    # wc.run_job(
+    #     "files/input",
+    #     "files/output",
+    # )
+    wc.run_job(n=1000)
     #
     # Retorna error si la carpeta output/ no existe
     if not os.path.exists("files/output/"):
