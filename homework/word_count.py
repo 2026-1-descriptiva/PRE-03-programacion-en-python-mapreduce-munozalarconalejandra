@@ -120,3 +120,6 @@ if __name__ == "__main__":
         mapper_fn=mapper,
         reducer_fn=reducer,
     )
+
+    end_time = time.time()
+    print(f"Tiempo de ejecución: {end_time - start_time:.2f} segundos")
